@@ -1,0 +1,33 @@
+        body {
+
+            font-family: Arial;
+
+            text-align: center;
+
+            background: #fe009db6;
+
+            padding: 100px 20px;
+
+        }
+
+        h1 {
+
+            font-size: 80px;
+
+            color: white;
+
+        }
+
+        a {
+
+            color: white;
+
+            background: #9011c6;
+
+            padding: 12px 25px;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+        }

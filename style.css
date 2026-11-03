@@ -1,0 +1,244 @@
+:root {
+    --bg: #0b0b12;
+    --bg-2: #12121a;
+    --panel: #1a1026;
+    --panel-strong: #221333;
+    --text: #f3ecff;
+    --muted: #c9c0dc;
+    --accent: #9d6bff;
+    --accent-2: #d8b4ff;
+    --border: rgba(157, 107, 255, 0.45);
+    --shadow: rgba(157, 107, 255, 0.55);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #1a1128 0%, var(--bg) 45%, #09090f 100%);
+    color: var(--text);
+}
+
+.container {
+    width: 1000px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    background: rgba(12, 8, 20, 0.92);
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    padding: 18px 0;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+}
+
+.header-container .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(157, 107, 255, 0.7);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu a:active,
+.menu a.active {
+    color: var(--text);
+    border-color: var(--border);
+    background: rgba(157, 107, 255, 0.12);
+    box-shadow: 0 0 0 1px rgba(157, 107, 255, 0.25), 0 0 18px rgba(157, 107, 255, 0.6);
+    outline: none;
+}
+
+.content-container {
+    padding: 40px 0;
+}
+
+.hero-block {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(26, 16, 38, 0.95), rgba(17, 12, 28, 0.95));
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 30px rgba(97, 44, 155, 0.3);
+}
+
+.hero-block p,
+.card p,
+.footer-container p {
+    color: var(--muted);
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), #6d4ee8);
+    color: var(--text);
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 999px;
+    margin-top: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 18px rgba(157, 107, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible,
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0 22px rgba(157, 107, 255, 0.8);
+    outline: none;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-block p {
+    line-height: 1.7;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(32, 21, 42, 0.9), rgba(15, 11, 22, 0.9));
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    border: 1px solid rgba(157, 107, 255, 0.45);
+    box-shadow: 0 0 18px rgba(157, 107, 255, 0.12);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-2);
+    box-shadow: 0 0 22px rgba(157, 107, 255, 0.45);
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.advantages {
+    margin-top: 48px;
+}
+
+.advantages h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.advantages-intro {
+    margin: 0 auto 24px;
+    max-width: 700px;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.footer-container {
+    background: rgba(12, 8, 20, 0.92);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .header-container .container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .content-container {
+        padding: 28px 0;
+    }
+
+    .hero-block {
+        padding: 30px 24px;
+    }
+
+    .cards-grid {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: calc(100% - 20px);
+        padding: 0 10px;
+    }
+
+    .header-container {
+        padding: 14px 0;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .hero-block {
+        padding: 24px 16px;
+    }
+
+    .hero-block h1 {
+        font-size: 28px;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 auto;
+    }
+
+    .advantages {
+        margin-top: 36px;
+    }
+}
